@@ -1,0 +1,34 @@
+ErrorDocument 404 /404.php
+Options -indexes
+DirectoryIndex Public/index.php
+
+ReWriteEngine On
+ReWriteRule ^Home$ Public/index.php [NC,L]
+ReWriteRule ^blog$ Public/blog.php [NC,L]
+ReWriteRule ^blog/([0-9]+)$ Public/blog.php?page=$1 [NC,L]
+ReWriteRule ^Posts/([a-zA-Z_-]+)$ Public/blog-single.php?title=$1 [NC,L]
+ReWriteRule ^Contact$ Public/contact.php [NC,L]
+
+ReWriteRule ^Login$ Auth/login.php [NC,L]
+ReWriteRule ^Signup$ Auth/index.php [NC,L]
+ReWriteRule ^Forgot-Password$ Auth/reset-pass.php [NC,L]
+ReWriteRule ^Verify-OTP$ Auth/reset-code.php [NC,L]
+ReWriteRule ^Verify-Email$ Auth/user-otp.php [NC,L]
+ReWriteRule ^Password-Changed$ Auth/password-changed.php [NC,L]
+ReWriteRule ^Create-New-Password$ Auth/new-password.php [NC,L]
+ReWriteRule ^Token$ Auth/token.php [NC,L]
+ReWriteRule ^Verify$ Auth/verify-email.php [NC,L]
+ReWriteRule ^Logout$ Auth/logout.php [NC,L]
+ReWriteRule ^Logout$ Auth/logout.php [NC,L]
+
+ReWriteRule ^Admin-dashboard$ Admin/dashboard/index.php [NC,L]
+ReWriteRule ^Admin-login$ Admin/dashboard/auth-login.php [NC,L]
+ReWriteRule ^User-Maneger$ Admin/dashboard/table.php [NC,L]
+ReWriteRule ^Update-user-info/([0-9]+)$ Admin/dashboard/update.php?id=$1 [NC,L]
+ReWriteRule ^Delete-User/([0-9]+)$ Admin/dashboard/delete.php?id=$1 [NC,L]
+ReWriteRule ^Posts-Maneger$ Admin/dashboard/Post-maneger.php [NC,L]
+ReWriteRule ^Add-Post$ Admin/dashboard/Post.php [NC,L]
+ReWriteRule ^Update-post/([0-9]+)$ Admin/dashboard/update-post.php?id=$1 [NC,L]
+ReWriteRule ^Delete-post/([0-9]+)$ Admin/dashboard/Delete-post.php?id=$1 [NC,L]
+
+

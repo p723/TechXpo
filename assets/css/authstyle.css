@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+:root{
+   --dark-bg:#24292d;
+   --dark-form:#303840;
+   --dark-input-bg:#24292d;
+   --dark-input-text:#fff;
+   --dark-text:#FFF;
+   --dark-discription-text:gray;
+   --dark-tital:#0d6efd;
+}
+html[data-theme="light"]{
+   --dark-bg:#f1f1f1;
+   --dark-form:#fff;
+   --dark-input-bg:#f1f1f1;
+   --dark-input-text:#000;
+   --dark-text:#000;
+   --dark-discription-text:gray;
+   --dark-tital:#0d6efd;
+}
+html,body{
+
+    background: var(--dark-bg);
+    font-family: 'Poppins', sans-serif;
+
+}
+::selection{
+    color: #fff;
+    background: #6665ee;
+}
+
+.main{
+   height: 100vh;
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* margin: 0;
+    padding: 0;*/
+}
+p{
+   color: var(--dark-discription-text);
+   font-weight: 500;
+   font-size: 17px;
+}
+a{
+   color: var(--dark-tital);
+
+   font-size: 17px !important;
+}
+.main form{
+    width: 360px;
+    background: var(--dark-form);
+    padding: 20px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-control,
+.form-control:active,
+.form-control:focus,
+.form-control:focus:active {
+     background-color: var(--dark-input-bg) !important;
+     border-color: var(--dark-input-bg);
+     color: var(--dark-input-text);
+         }
+label{
+   color: var(--dark-input-text);
+}
+.btt{
+}
+.btn{
+
+   
+}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (max-width: 940px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        .row{
+           height: 100vh;
+           width: 100%
+        }
+         .main{
+           background: var(--dark-form);
+         }
+        .main form{
+           height: 100%;
+           width: 100%;
+           border-radius: 0;
+           box-shadow: none;
+        }
+        html,body{
+           background: var(--dark-form);
+        }
+         .heading{
+            text-align: center;
+         }
+         
+      }
+     
